@@ -1,0 +1,8 @@
+<h1><%=@restaurant.name%></h1>
+
+<p>This is a <strong><%=@restaurant.category.capitalize%></strong> restaurant</p>
+<p>Address : <%=@restaurant.address%></p>
+<p>Phone : <%=@restaurant.phone_number%></p>
+
+<%= link_to("Create a review", new_restaurant_review_path(@restaurant.id), class: "btn btn-primary")%>
+<%= link_to("See reviews", restaurant_reviews_path(@restaurant.id), class: "btn btn-primary")%>
